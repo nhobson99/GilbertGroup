@@ -65,8 +65,7 @@ a {
 }
 
 .group_member_photo {
-	height: 200px;
-	width: auto;
+	width: 140px;
 	border: black solid 1px;
 	margin: 20px;
 	box-sizing: border;
