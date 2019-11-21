@@ -88,7 +88,7 @@ a {
 
 .main {
 	height: 1000%;
-	width: 78%;
+	float: both;
 	margin-left: 190px;
 	position: absolute;
 	outline: black solid 2px;
@@ -97,6 +97,7 @@ a {
 }
 
 .menu {
+	float: both;
 	text-align: left;
 	background-color: darkorange;
 	width: 190px;
