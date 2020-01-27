@@ -1,0 +1,23 @@
+.parent {
+    display:  flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 40%;
+    max-height: 60%;
+}
+.parent > label {
+    width: 20rem;
+}
+.parent > label:hover {
+    background-color: aliceblue
+}
+label {
+    display: block;
+}
+body {
+    background-color: silver;
+}
+h1 {
+    text-align: center;
+}

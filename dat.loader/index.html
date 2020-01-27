@@ -1,0 +1,18 @@
+<head>
+	<title>Dat Loader</title>
+	<link rel=stylesheet href="datloader.css"></link>
+</head>
+
+<body>
+	<script src="./exp.js"></script>
+	<h1>Dat Loader</h1>
+
+	<details>
+		<summary>Directions: click here</summary>
+		<p>This site will allow you to select multiple data files at once, applying a filter to all of them to convert it into another data type that is more easily computer readable. It expects data to have some kind of delimiter, such as comma separated like a CSV file.</p>
+	</details>
+
+	<input type=file id="fileSelector" multiple>Select file or folder</input>
+	<button onclick="exp();">Begin</button>
+	<textarea id="textbox" style="width: 100%; height: 30%">File contents will show here</textarea>
+</body>
