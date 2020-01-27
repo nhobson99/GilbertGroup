@@ -1,5 +1,6 @@
 var total_num = 0;
 var i;
+var fields;
 
 function exp() {
 	var textbox = document.getElementById("textbox");
@@ -18,7 +19,7 @@ function exp() {
 		textbox.innerHTML = fileReader.result.split("[Data]")[1].split("\n")[1].replace(/,/g, "\n");
 		const parent = document.createElement('div');
 		parent.classList.add("parent");
-		var fields = textbox.innerHTML.split("\n");
+		fields = textbox.innerHTML.split("\n");
 		for (i = 0; i < fields.length; i++) {
 			if (fields[i] != "") {
 				var labelfield = document.createElement("LABEL");
@@ -55,9 +56,6 @@ function download(filename, text) {
 	document.body.removeChild(element);
 }
 
-var text;
-var name;
-
 function create_download() {
 	var fields = [];
 	var tmp;
@@ -76,27 +74,33 @@ function create_download() {
 	}
 
 	for (i = 0; i < fileSelector.files.length; i++) {
-		var blob = new Blob();
-		var fileReader = new FileReader();
-		text = "";
-		name = fileSelector.files[i].name;
-
-		fileReader.readAsText(fileSelector.files[i]);
-		fileReader.onloadend = function(){
-			var fileSelector = document.getElementById("fileSelector");
-console.log("file selector: " + fileSelector)
-console.log("i: " + i)
 			var prom = new Promise(function(resolve, reject) {
-				var f = fileReader.result.split("[Data]");
+				var fileReader = new FileReader();
 
-				text += f[0];
-				resolve("true");
-			});
 
-			prom.then(function(value) {
-				download("new."+name, text);
-			});
-		}
+				var name = fileSelector.files[i].name;
 		
+				fileReader.readAsText(fileSelector.files[i]);
+				fileReader.onload = function(){
+					var f = fileReader.result.split("[Data]");
+					var text = f[0] + "\n[Data]\n";
+					var csv = f[1].split(",");
+					for (var n = 0; n < csv.length; n++) {
+						if (fields[n%(fields.length-1)]) {
+							text += csv[n] + ",";
+						}
+						if (n%(fields.length-1) == 0) {
+							text += "\n";
+						}
+					}
+					
+					download("new."+name, text);
+				}
+				resolve(f);
+			});
+
+			prom.then(function(f) {
+				return null;
+			});
 	}
 }
