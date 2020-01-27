@@ -1,4 +1,5 @@
 var total_num = 0;
+var i;
 
 function exp() {
 	var textbox = document.getElementById("textbox");
@@ -7,7 +8,7 @@ function exp() {
 	var fileReader = new FileReader();
 	fileReader.readAsText(fileSelector.files[0]);
 
-	for (var i = 0; i < total_num; i++) {
+	for (i = 0; i < total_num; i++) {
 		removeElement(document.getElementById("field"+i));
 	}
 
@@ -18,7 +19,7 @@ function exp() {
 		const parent = document.createElement('div');
 		parent.classList.add("parent");
 		var fields = textbox.innerHTML.split("\n");
-		for (var i = 0; i < fields.length; i++) {
+		for (i = 0; i < fields.length; i++) {
 			if (fields[i] != "") {
 				var labelfield = document.createElement("LABEL");
 				
@@ -54,6 +55,9 @@ function download(filename, text) {
 	document.body.removeChild(element);
 }
 
+var text;
+var name;
+
 function create_download() {
 	var fields = [];
 	var tmp;
@@ -65,25 +69,34 @@ function create_download() {
 
 	console.log("Total num: " + total_num);
 
-	for (var i = 0; i < total_num; i++) {
+	for (i = 0; i < total_num; i++) {
 		tmp = document.getElementById("field"+i);
 		textbox.innerHTML += tmp.name + ": " + tmp.checked + "\n";
 		fields[i] = tmp.checked;
 	}
 
-	console.log(fileSelector.files.length);
-
-	for (var i = 0; i < fileSelector.files.length; i++) {
-		var text = "abcdefg";
+	for (i = 0; i < fileSelector.files.length; i++) {
 		var blob = new Blob();
 		var fileReader = new FileReader();
-		
+		text = "";
+		name = fileSelector.files[i].name;
+
 		fileReader.readAsText(fileSelector.files[i]);
-		fileReader.onload = function(){
-			var f = fileReader.result.split("[Data]");;
-			for (var j = 0; j < fileSelector.files.length; j++) {
-			}
+		fileReader.onloadend = function(){
+			var fileSelector = document.getElementById("fileSelector");
+console.log("file selector: " + fileSelector)
+console.log("i: " + i)
+			var prom = new Promise(function(resolve, reject) {
+				var f = fileReader.result.split("[Data]");
+
+				text += f[0];
+				resolve("true");
+			});
+
+			prom.then(function(value) {
+				download("new."+name, text);
+			});
 		}
-		download("new."+fileSelector.files[i].name, text);
+		
 	}
 }
