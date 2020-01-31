@@ -23,8 +23,8 @@ function exp() {
 		for (i = 0; i < fields.length; i++) {
 			if (fields[i] != "") {
 				var labelfield = document.createElement("LABEL");
-				
 				var inputfield = document.createElement("INPUT");
+
 				inputfield.setAttribute("type", "checkbox");
 				inputfield.setAttribute("id", "field"+i);
 				inputfield.setAttribute("name", fields[i]);
@@ -84,6 +84,7 @@ function create_download() {
 					var f = fileReader.result.split("[Data]");
 					var csvCheckbox = document.getElementById("csvCheckbox");
 					var text;
+					var offset = 0;
 					if (csvCheckbox.checked) {
 						text = "";
 						name = name.replace(".dat", ".csv")
@@ -91,10 +92,15 @@ function create_download() {
 						text = f[0] + "\n[Data]\n";
 					}
 					
-					var csv = f[1].replace(/(\r\n\r\n|\n\n|\r\r)/g, ",").replace(/(\r\n|\n|\r),/g, ",,").split(",");
-					console.log(csv)
-					for (var n = 0; n < csv.length; n++) {
-						if (fields[(n)%(fields.length)]) {
+					var csv = f[1].replace(/(\r\n\r\n|\n\n|\r\r)/g, "").replace(/(\r\n|\n|\r),/g, ",,").split(",");
+
+					for (var n = 0; n+offset < csv.length; n++) {
+						if (csv[n+offset].includes("=")) {
+							console.log("is an offset")
+							offset += 1;
+							continue;
+						}
+						if (fields[(n+offset)%(fields.length)]) {
 							text += csv[n].replace(/^\s+|\s+$/g, '') + ",";
 						}
 						if (n%(fields.length) == 0) {
