@@ -1,43 +1,154 @@
 <head>
 	<link rel="stylesheet" href="gg.css">
 	<title>Gilbert Group</title>
+	<style>
+		img {
+			background-color: white;
+			width: 70%;
+			border: none;
+		}
+
+		/* Three image containers (use 25% for four, and 50% for two, etc) */
+		.column {
+			float: left;
+			padding: 10px;
+		}
+
+		.left {
+			width: 40%;
+		}
+
+		.right {
+			width: 20%;
+		}
+
+		.middle {
+			width: 15%;
+		}
+
+		/* Clear floats after image containers */
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+	</style>
 </head>
 
 <body>
 	<div class="menu">
-		<embed src="menu.html" height=100%></embed>
+		<embed src="menu.html" width=100% height=100%></embed>
 	</div>
 
-	<div class="main" style="height: 300%;">
+	<div class="main">
 		<h1>Joint Institute for Advance Materials [JIAM]</h1>
 		<h2>Gilbert Group</h2>
 		<p>&nbsp;</p>
-		<p>The Joint Institute for Advanced Materials (JIAM) focuses on studying new ways of using previously unexplored scientific phenomenon. The Gilbert Group narrows that focus down to magnetism, finding new and interesting ways of exploiting electromagnetism in future electronics. Dr. Dustin Gilbert leads the group of students from the University of Tennessee, Knoxville, some of the best minds from both undergraduates and post-graduate students at the Tickle College of Engineering.</p>
-		
-		<img src="images/Group_museum.jpg"></img>
-		<p style="width: 500px; align: center; display: block; margin-left: auto; margin-right: auto">A picture of our lab, performing an experiment at NIST on the NG7 SANS instrument, in August of 2019. Left to right: Namila Liyanage, Nan Tang, Julie Borchers, Lisa Debeer-Schmidt, Dustin Gilbert, James Lee, Alex Grutter, Liz Quigley, and Brian Maranville</p>
+		<p>The Joint Institute for Advanced Materials (JIAM) focuses on studying new ways of using previously unexplored
+			scientific phenomenon. The Gilbert Group narrows that focus down to magnetism, finding new and interesting
+			ways of exploiting electromagnetism in future electronics. Dr. Dustin Gilbert leads the group of students
+			from the University of Tennessee, Knoxville, some of the best minds from both undergraduates and
+			post-graduate students at the Tickle College of Engineering.</p>
 
-		<p>&nbsp;</p>
-		<embed width=90% height=800px src="https://gilbertgroupnews.blogspot.com/?m=1" style="overflow: hidden; margin: 5%;"></embed>
-	<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>
-	<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>
-	<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       </p>
+		<img src="images/Group_museum.jpg" width=100%></img>
+		<p style="width: 80%; text-align: center; display: block; margin-left: auto; margin-right: auto">A picture of
+			our lab, performing an experiment at NIST on the NG7 SANS instrument, in August of 2019. Left to right:
+			Namila Liyanage, Nan Tang, Julie Borchers, Lisa Debeer-Schmidt, Dustin Gilbert, James Lee, Alex Grutter, Liz
+			Quigley, and Brian Maranville</p>
+
+		<br>
+
+
+		<div class="row">
+			<div class="column left">
+				<figure>
+					<img src="images/DOE_BES_Logo.jpg"></img>
+				</figure>
+			</div>
+			<div class="column middle">
+			</div>
+			<div class="column right">
+				<figure>
+					<img src="images/NSF_Logo.png"></img>
+				</figure>
+			</div>
+		</div>
+
+		<br><br>
+		<hr width="95%" size="4" color="darkgrey">
+		<hr width="80%" size="6" color="darkorange">
+		<hr width="95%" size="4" color="darkgrey">
+		<br>
+		
+		<div style="width: 80%; height: 400px; display: block; margin-left: auto; margin-right: auto;">
+			<a class="twitter-timeline" data-width=100% data-height="inherit" data-theme="dark"
+				href="https://twitter.com/GilbertlabU?ref_src=twsrc%5Etfw">Tweets by GilbertlabU</a>
+			<script async src="widgets.js" charset="utf-8"></script>
+		</div>
+
+		<br><br>
+		<hr width="95%" size="4" color="darkgrey">
+		<hr width="80%" size="6" color="darkorange">
+		<hr width="95%" size="4" color="darkgrey">
+		<br>
+
+		<h3 style="color:darkorange; font-size:200%;">Current News:</h3>
+		<p>(08/2020)<b>We have received a grant to promote collaboration between UTK and ORNL, developing multicomponent
+				alloys for biomedical applications!</b></p>
+		<br>
+		<p>(08/2020)<b>We are mentoring a team of four senior undergraduate MSE students in completing their senior
+				design project. This work is associated with our NSF grant and will see students investigating the
+				material science paradigm as it relates to making respirators and filters addressing the Coronavirus
+				pandemic!</b></p>
+		<br>
+		<p>(08/2020)<b><a style="color:darkorange">Welcome back to school Students of The University of Tennessee!!!
+					Stay Safe and Healthy!!! As a face-to-face instructor, we will get through this together!!!</a></b>
+		</p>
+		<br>
+		<p>(08/2020)<b>I have been asked to be the faculty advisor for the University of Tennessee chapter of the <a
+					href="https://utkshpe.weebly.com/" style="color:darkorange">Society for Hispanic Professional
+					Engineers</a>! I am exceited to be engaged with these talented, motivated students and their
+				fantastic organization!</b></p>
+		<br>
+		<p>(06/2020)<b>We have been awarded a RAPID Grant from the National Science Foundation to develop
+				self-sanitizing and recyclable respirators in response to the COVID-19 pandemic. This work will be done
+				in collaboration with <a target="_blank" href="https://foodscience.tennessee.edu/tom-denes"
+					style="color:darkorange">Dr. Tom Denes</a> from UTK Food Science and <a style="color:darkorange">Dr.
+					Anne Murray</a>. Graduate student <a style="color:darkorange">Cameron Jorgensen</a> will be leading
+				this effort.</b></p>
+		<br>
+		<p>(06/2020) <a target="_blank" href="DOE_Career.html"><b>We have been awarded a DOE Career Award, under the
+					title "<i>Exotic Uses of Neutrons and X-rays as Probes for Chiral Magnets</i>". Graduate Students <a
+						style="color:darkorange">Namila Liyanage</a> and <a style="color:darkorange">Nan Tang</a> will
+					be taking lead.</b></a></p>
+		<br>
+		<p>(04/2020) <a target="_blank" href="https://aip.scitation.org/doi/10.1063/5.0003149">New collaborative work
+				from within UTK, investigating the enigmatic properties of high entropy oxides.</a> Also see <a
+				target="_blank"
+				href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.3.104416">here</a></p>
+		<br>
+		<p>(04/2020) <a target="_blank" href="https://advances.sciencemag.org/content/6/15/eaay0114">New collaborative
+				publication, investigating magnetic anisotropy in 2D magnets found at oxide interfaces</a></p>
+		<br>
+		<p>(10/2019) <a target="_blank"
+				href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.3.104406">The first paper
+				from our lab is out! Working with researchers from UCSD, SPAWAR, ORNL, and NIST, we stabalized skyrmions
+				in thin films at ambient conditions</a></p>
+		</p>
 	</div>
 </body>
 
 <!-- Beginning of statcounter code -->
 <script type="text/javascript">
-var sc_project=12112526;
-var sc_invisible=1;
-var sc_security="0307cb6b";
+	var sc_project = 12112526;
+	var sc_invisible = 1;
+	var sc_security = "0307cb6b";
 </script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - StatCounter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/12112526/0/0307cb6b/1/"
-alt="Web Analytics Made Easy -
-StatCounter"></a></div></noscript>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+	<div class="statcounter"><a title="Web Analytics
+Made Easy - StatCounter" href="https://statcounter.com/" target="_blank"><img class="statcounter"
+				src="https://c.statcounter.com/12112526/0/0307cb6b/1/" alt="Web Analytics Made Easy -
+StatCounter"></a></div>
+</noscript>
 <!-- End of Statcounter Code -->
