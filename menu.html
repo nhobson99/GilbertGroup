@@ -1,49 +1,159 @@
-
-<link rel="stylesheet" href="gg.css">
+<link rel="stylesheet" href="gg.css" />
 <style>
+	br,hr {
+		height: 0px;
+		line-height: 0px;
+	}
 
-body {
-	overflow: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-}
+	body {
+		line-height: 1;
+		overflow: none;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
 
-br {
-	height: 1px;
-}
+	.menu_entry {
+		line-height: 50px;
+		width: 100%;
+		height: 50px;
+		margin: none;
+		padding: none;
+	}
 
+	.menu_entry:hover {
+		background-color: orange;
+		margin: none;
+		padding: none;
+		transition: background-color 0.1s;
+	}
+
+	.icon {
+		width: 40px;
+		height: 40px;
+		left: 0;
+		float: left;
+		display: block;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-top: auto;
+		margin-bottom: auto;
+		padding: none;
+		outline: none;
+		border: none;
+	}
+
+	.menu_icon {
+		width: 50px;
+		left: 0;
+		float: left;
+		display: block;
+		outline: none;
+		border: none;
+		margin: 0;
+		margin-right: 10px;
+		padding: none;
+	}
+
+	.menu_link {
+		visibility: visible;
+		display: block;
+		text-align: left;
+		float: left;
+		height: 40px;
+		width: 100%;
+		font-size: 28px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.v_center {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.menu_title {
+		visibility: visible;
+		display: block;
+		text-align: left;
+		float: left;
+		width: 100%;
+		font-size: 32px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
 </style>
 
+<a class="menu_title" target="_parent"><img class="menu_icon" src="icons/menu.png" />
+	<div class="v_center">Menu</div>
+</a>
+<br />
+<hr style="border: 1px solid black; width: 100%" />
 
-<a class="menu_title" target="_parent"><img class="menu_icon" src="icons/menu.png" width=36px></img>Menu</a>
-</br>
-<hr style="border: 1px solid black; width: 100%;"></hr>
-<a class="link" target="_parent" href="index.html"><img class="icon" width=36px src="icons/home.png"></img>Home</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="index.html"><img class="icon" src="icons/home.png" />
+		<div class="v_center">Home</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="research.html"><img class="icon" width=36px src="icons/research.png"></img>Research</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="research.html"><img class="icon" src="icons/research.png" />
+		<div class="v_center">Research</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="instrumentation.html"><img class="icon" width=36px src="icons/instrumentation.png"></img>Instrumentation</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="instrumentation.html"><img class="icon"
+			src="icons/instrumentation.png" />
+		<div class="v_center">Instrumentation</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="groupMembers.html"><img class="icon" width=36px src="icons/group.png"></img>Group Members</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="groupMembers.html"><img class="icon" src="icons/group.png" />
+		<div class="v_center">Group Members</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="publications.html"><img class="icon" width=36px src="icons/publications.png"></img>Publications</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="publications.html"><img class="icon" src="icons/publications.png" />
+		<div class="v_center">Publications</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="classes.html"><img class="icon" width=36px src="icons/classes.png"></img>Classes</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="classes.html"><img class="icon" src="icons/classes.png" />Classes</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="outreach.html"><img class="icon" width=36px src="icons/outreach.png"></img>Outreach</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="outreach.html"><img class="icon" src="icons/outreach.png" />
+		<div class="v_center">Outreach</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="about.html"><img class="icon" width=36px src="icons/about.png"></img>About</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="about.html"><img class="icon" src="icons/about.png" />
+		<div class="v_center">About</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="labtour.html"><img class="icon" width=36px src="icons/tour.png"></img>Lab Tour</a>
-</br>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="labtour.html"><img class="icon" src="icons/tour.png" />
+		<div class="v_center">Lab Tour</div>
+	</a>
+</div>
+<br />
 
-<a class="link" target="_parent" href="labfun.html"><img class="icon" width=36px src="icons/fun.png"></img>Lab Fun!</a>
+<div class="menu_entry">
+	<a class="menu_link" target="_parent" href="labfun.html"><img class="icon" src="icons/fun.png" />
+		<div class="v_center">Lab Fun!</div>
+	</a>
+</div>
